@@ -446,6 +446,63 @@ h6 {
     margin: 0;
 }
 
+.service-pillar {
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    padding: 32px;
+    background: #f2f2f2;
+    border-radius: 18px;
+}
+
+.service-pillar > i {
+    display: block;
+    margin-bottom: 18px;
+    color: #003a66;
+    font-size: 42px;
+}
+
+.service-pillar h3 {
+    font-size: 23px;
+}
+
+.service-pillar ul,
+.service-list {
+    margin: 20px 0 0;
+    padding-left: 20px;
+}
+
+.service-pillar li,
+.service-list li {
+    margin-bottom: 10px;
+    color: #595959;
+    line-height: 1.55;
+}
+
+.service-category {
+    margin-bottom: 55px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #e5e5e5;
+    scroll-margin-top: 100px;
+}
+
+.service-category:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.service-category .section-header {
+    margin-bottom: 25px;
+}
+
+.service-list {
+    columns: 2;
+    column-gap: 48px;
+}
+
+.service-list li {
+    break-inside: avoid;
+}
+
 
 
 /**************************************/
@@ -950,6 +1007,10 @@ h6 {
 }
 
 @media (max-width: 575px) {
+    .service-list {
+        columns: 1;
+    }
+
     .header .carousel-content {
         padding: 28px 20px;
     }
