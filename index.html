@@ -11,7 +11,7 @@
         <link href="img/favicon.ico" rel="icon">
 
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
         <!-- Libraries CSS -->
         <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,12 +24,13 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <!-- Nav Start -->
         <div id="nav">
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-md navbar-light">
+                <nav class="navbar navbar-expand-md navbar-light" aria-label="Primary">
                     <a href="index.html" class="navbar-brand">ngabo<span>tech</span></a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -42,7 +43,7 @@
                             <a href="process.html" class="nav-item nav-link">Process</a>
                             <a href="pricing.html" class="nav-item nav-link">Plans</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
+                                <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" data-toggle="dropdown">More</a>
                                 <div class="dropdown-menu">
                                     <a href="skill.html" class="dropdown-item">Expertise</a>
                                     <a href="team.html" class="dropdown-item">Our Team</a>
@@ -60,13 +61,13 @@
         <!-- Nav End -->
 
         <!-- Header Start-->
-        <div class="header">
-            <div id="header-slider" class="carousel slide" data-ride="carousel">
+        <div class="header" id="main-content" tabindex="-1">
+            <div id="header-slider" class="carousel slide" data-ride="carousel" data-interval="false">
                 <!-- Indicators -->
                 <ul class="carousel-indicators">
-                    <li data-target="#header-slider" data-slide-to="0" class="active"></li>
-                    <li data-target="#header-slider" data-slide-to="1"></li>
-                    <li data-target="#header-slider" data-slide-to="2"></li>
+                    <li><button type="button" data-target="#header-slider" data-slide-to="0" class="active" aria-label="Show slide 1"></button></li>
+                    <li><button type="button" data-target="#header-slider" data-slide-to="1" aria-label="Show slide 2"></button></li>
+                    <li><button type="button" data-target="#header-slider" data-slide-to="2" aria-label="Show slide 3"></button></li>
                 </ul>
 
                 <div class="carousel-inner">
@@ -74,14 +75,14 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="carousel-content">
-                                    <h2>Your outsourced IT department</h2>
-                                    <p>Infrastructure, networks, security and software — handled end to end, so your team can focus on the work.</p>
-                                    <a class="btn" href="service.html">Read More</a>
+                                    <h1>Your IT, handled end to end</h1>
+                                    <p>One dependable partner for support, infrastructure, security and software — so your team can focus on the work.</p>
+                                    <a class="btn" href="service.html">Explore our services</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="carousel-img">
-                                    <img src="img/slider-1.png" alt="Image">
+                                    <img src="img/slider-1.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -90,14 +91,14 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="carousel-content">
-                                    <h2>Keep your business running</h2>
+                                    <h2>Reliable support, without the downtime</h2>
                                     <p>Proactive support and remote monitoring that catch problems before they become downtime.</p>
-                                    <a class="btn" href="service.html">Read More</a>
+                                    <a class="btn" href="service.html">Explore IT support</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="carousel-img">
-                                    <img src="img/slider-2.png" alt="Image">
+                                    <img src="img/slider-2.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -106,25 +107,25 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="carousel-content">
-                                    <h2>From cabling to cloud</h2>
+                                    <h2>From your network to the cloud</h2>
                                     <p>One contract, one team, every layer of your technology covered — hardware to strategy.</p>
-                                    <a class="btn" href="contact.html">Read More</a>
+                                    <a class="btn" href="contact.html">Talk to our team</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="carousel-img">
-                                    <img src="img/slider-3.png" alt="Images">
+                                    <img src="img/slider-3.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a class="carousel-control-prev" href="#header-slider" data-slide="prev">
-                    <i class="ion-ios-arrow-back"></i>
+                <a class="carousel-control-prev" href="#header-slider" data-slide="prev" aria-label="Previous slide">
+                    <i class="ion-ios-arrow-back" aria-hidden="true"></i>
                 </a>
-                <a class="carousel-control-next" href="#header-slider" data-slide="next">
-                    <i class="ion-ios-arrow-forward"></i>
+                <a class="carousel-control-next" href="#header-slider" data-slide="next" aria-label="Next slide">
+                    <i class="ion-ios-arrow-forward" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
@@ -485,8 +486,8 @@
             </div>
         </div>
         <!-- Skills End-->
-        
-        
+
+
         <!-- Counters Start-->
         <div class="counters">
             <div class="container">
@@ -619,7 +620,7 @@
             </div>
         </div>
         <!-- Portfolio End -->
-        
+
         <!-- Team Start -->
         <div class="team">
             <div class="container">
@@ -634,12 +635,7 @@
                     <div class="col-lg-3 col-sm-6 team-item">
                         <div class="team-img">
                             <img src="img/team-1.jpg" class="img-fluid" alt="Team Member">
-                            <div class="team-social">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="team-info">
                             <h3>John P. Haight</h3>
@@ -650,12 +646,7 @@
                     <div class="col-lg-3 col-sm-6 team-item">
                         <div class="team-img">
                             <img src="img/team-2.jpg" class="img-fluid" alt="Team Member">
-                            <div class="team-social">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="team-info">
                             <h3>David R. Bernard</h3>
@@ -666,12 +657,7 @@
                     <div class="col-lg-3 col-sm-6 team-item">
                         <div class="team-img">
                             <img src="img/team-3.jpg" class="img-fluid" alt="Team Member">
-                            <div class="team-social">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="team-info">
                             <h3>Dana A. Thomas</h3>
@@ -682,12 +668,7 @@
                     <div class="col-lg-3 col-sm-6 team-item">
                         <div class="team-img">
                             <img src="img/team-4.jpg" class="img-fluid" alt="Team Member">
-                            <div class="team-social">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="team-info">
                             <h3>Ava M. Proctor</h3>
@@ -774,7 +755,7 @@
             </div>
         </div>
         <!-- Testimonials End -->
-        
+
         <!-- Clients Start -->
         <div class="clients">
             <div class="container">
@@ -813,20 +794,24 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form">
-                            <form class="contactForm">
+                            <form class="contactForm" action="mailto:info@mushangatech.com" method="post" enctype="text/plain">
                                 <div class="form-row">
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Your Name" />
+                                        <label class="sr-only" for="contact-name">Your name</label>
+                                        <input id="contact-name" type="text" name="name" class="form-control" placeholder="Your Name" autocomplete="name" required />
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <input type="email" class="form-control" placeholder="Your Email" />
+                                        <label class="sr-only" for="contact-email">Your email</label>
+                                        <input id="contact-email" type="email" name="email" class="form-control" placeholder="Your Email" autocomplete="email" required />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject" />
+                                    <label class="sr-only" for="contact-subject">Subject</label>
+                                    <input id="contact-subject" type="text" name="subject" class="form-control" placeholder="Subject" />
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                    <label class="sr-only" for="contact-message">Message</label>
+                                    <textarea id="contact-message" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
                                 </div>
                                 <div><button class="btn" type="submit">Send Message</button></div>
                             </form>
@@ -834,7 +819,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26361250.667320687!2d-113.75533773453304!3d36.24128894212527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1574923227698!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            <h3>Talk with our team</h3>
+                            <p>Get in touch about support, infrastructure, security or your next technology project.</p>
+                            <p><strong>Email:</strong> <a href="mailto:info@mushangatech.com">info@mushangatech.com</a></p>
+                            <p><strong>WhatsApp:</strong> <a href="https://wa.me/256701276471" target="_blank" rel="noopener">+256 701 276 471</a></p>
                         </div>
                     </div>
                 </div>
@@ -853,8 +841,6 @@
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="index.html">Home</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="about.html">About us</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="service.html">Our services</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms &amp; condition</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
                             </ul>
                         </div>
 
@@ -874,26 +860,19 @@
                             <p>
                                 Remote &amp; on-site support<br>
                                 Serving businesses across your region<br>
-                                <strong>Email:</strong> hello@ngabotech.com<br>
+                                <strong>Email:</strong> <a href="mailto:info@mushangatech.com">info@mushangatech.com</a><br>
+                                <strong>WhatsApp:</strong> <a href="https://wa.me/256701276471" target="_blank" rel="noopener">+256 701 276 471</a><br>
                                 <strong>Support:</strong> 24/7 remote monitoring<br>
                             </p>
 
-                            <div class="social-links">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                                <a href="#"><i class="ion-logo-googleplus"></i></a>
-                            </div>
+
 
                         </div>
 
                         <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <h4>Subscription</h4>
-                            <p>Get practical IT tips, security alerts and ngabotech updates straight to your inbox.</p>
-                            <form action="" method="post">
-                                <input type="email" name="email"><input type="submit"  value="Subscribe">
-                            </form>
+                            <h4>Get in touch</h4>
+                            <p>Have an IT question? Email our team and we will be in touch.</p>
+                            <p><a href="mailto:info@mushangatech.com">info@mushangatech.com</a></p>
                         </div>
 
                     </div>
@@ -914,9 +893,9 @@
         </div>
         <!-- Footer End -->
 
-        <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+        <a href="#nav" class="back-to-top" aria-label="Back to top"><i class="ion-ios-arrow-up"></i></a>
 
-        <a href="https://wa.me/000000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="ion-logo-whatsapp"></i></a>
+        <a href="https://wa.me/256701276471" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="ion-logo-whatsapp"></i></a>
 
 
         <!-- Libraries JS -->

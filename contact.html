@@ -11,7 +11,7 @@
         <link href="img/favicon.ico" rel="icon">
 
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
         <!-- Libraries CSS -->
         <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,12 +24,13 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <!-- Nav Start -->
         <div id="nav">
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-md navbar-light">
+                <nav class="navbar navbar-expand-md navbar-light" aria-label="Primary">
                     <a href="index.html" class="navbar-brand">ngabo<span>tech</span></a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -42,7 +43,7 @@
                             <a href="process.html" class="nav-item nav-link">Process</a>
                             <a href="pricing.html" class="nav-item nav-link">Plans</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
+                                <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" data-toggle="dropdown">More</a>
                                 <div class="dropdown-menu">
                                     <a href="skill.html" class="dropdown-item">Expertise</a>
                                     <a href="team.html" class="dropdown-item">Our Team</a>
@@ -60,7 +61,7 @@
         <!-- Nav End -->
 
         <!-- Contact Start -->
-        <div class="contact mt-100">
+        <div id="main-content" tabindex="-1" class="contact mt-100">
             <div class="container">
                 <div class="section-header">
                     <h2>Contact Us</h2>
@@ -72,20 +73,24 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form">
-                            <form class="contactForm">
+                            <form class="contactForm" action="mailto:info@mushangatech.com" method="post" enctype="text/plain">
                                 <div class="form-row">
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Your Name" />
+                                        <label class="sr-only" for="contact-name">Your name</label>
+                                        <input id="contact-name" type="text" name="name" class="form-control" placeholder="Your Name" autocomplete="name" required />
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <input type="email" class="form-control" placeholder="Your Email" />
+                                        <label class="sr-only" for="contact-email">Your email</label>
+                                        <input id="contact-email" type="email" name="email" class="form-control" placeholder="Your Email" autocomplete="email" required />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject" />
+                                    <label class="sr-only" for="contact-subject">Subject</label>
+                                    <input id="contact-subject" type="text" name="subject" class="form-control" placeholder="Subject" />
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                    <label class="sr-only" for="contact-message">Message</label>
+                                    <textarea id="contact-message" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
                                 </div>
                                 <div><button class="btn" type="submit">Send Message</button></div>
                             </form>
@@ -95,20 +100,16 @@
                         <div class="form">
                             <h3 style="margin-bottom:20px;">Get in touch</h3>
                             <p>
-                                <strong>Email:</strong> <a href="mailto:hello@ngabotech.com">hello@ngabotech.com</a><br>
+                                <strong>Email:</strong> <a href="mailto:info@mushangatech.com">info@mushangatech.com</a><br>
+                                <strong>WhatsApp:</strong> <a href="https://wa.me/256701276471" target="_blank" rel="noopener">+256 701 276 471</a><br>
                                 <strong>Coverage:</strong> Remote support everywhere, on-site support across your region<br>
                                 <strong>Response time:</strong> Within one business day<br>
                                 <strong>Emergency support:</strong> 24/7 remote monitoring for retainer clients
                             </p>
                             <p>
-                                Prefer to talk it through first? Reach out on any of our social channels and we'll set up a call.
+                                Prefer to talk it through? Message us on WhatsApp or email us and we will set up a call.
                             </p>
-                            <div class="social-links">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -127,8 +128,6 @@
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="index.html">Home</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="about.html">About us</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="service.html">Our services</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms &amp; condition</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
                             </ul>
                         </div>
 
@@ -148,26 +147,19 @@
                             <p>
                                 Remote &amp; on-site support<br>
                                 Serving businesses across your region<br>
-                                <strong>Email:</strong> hello@ngabotech.com<br>
+                                <strong>Email:</strong> <a href="mailto:info@mushangatech.com">info@mushangatech.com</a><br>
+                                <strong>WhatsApp:</strong> <a href="https://wa.me/256701276471" target="_blank" rel="noopener">+256 701 276 471</a><br>
                                 <strong>Support:</strong> 24/7 remote monitoring<br>
                             </p>
 
-                            <div class="social-links">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                                <a href="#"><i class="ion-logo-googleplus"></i></a>
-                            </div>
+
 
                         </div>
 
                         <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <h4>Subscription</h4>
-                            <p>Get practical IT tips, security alerts and ngabotech updates straight to your inbox.</p>
-                            <form action="" method="post">
-                                <input type="email" name="email"><input type="submit"  value="Subscribe">
-                            </form>
+                            <h4>Get in touch</h4>
+                            <p>Have an IT question? Email our team and we will be in touch.</p>
+                            <p><a href="mailto:info@mushangatech.com">info@mushangatech.com</a></p>
                         </div>
 
                     </div>
@@ -188,9 +180,9 @@
         </div>
         <!-- Footer End -->
 
-        <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+        <a href="#nav" class="back-to-top" aria-label="Back to top"><i class="ion-ios-arrow-up"></i></a>
 
-        <a href="https://wa.me/000000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="ion-logo-whatsapp"></i></a>
+        <a href="https://wa.me/256701276471" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="ion-logo-whatsapp"></i></a>
 
 
         <!-- Libraries JS -->

@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-    
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -9,11 +9,12 @@
             $('#nav').removeClass('nav-sticky');
         }
     });
-    
-    
+
+
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
+            $('.navbar .dropdown').off('mouseover mouseout');
             if ($(window).width() > 768) {
                 $('.navbar .dropdown').on('mouseover', function () {
                     $('.dropdown-toggle', this).trigger('click');
@@ -26,9 +27,15 @@
         }
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
+
+        $('.navbar-collapse').on('click', '.nav-link:not(.dropdown-toggle), .dropdown-item', function () {
+            if ($(window).width() < 768) {
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -42,6 +49,21 @@
         return false;
     });
 
+    // Send static-site enquiries through the visitor's default email app.
+    $('.contactForm').on('submit', function (event) {
+        event.preventDefault();
+
+        var form = this;
+        var name = form.elements.name.value.trim();
+        var email = form.elements.email.value.trim();
+        var subject = form.elements.subject.value.trim() || 'Website enquiry';
+        var message = form.elements.message.value.trim();
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+
+        window.location.href = 'mailto:info@mushangatech.com?subject='
+            + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+
 
     // Skills section
     $('.skills').waypoint(function () {
@@ -49,14 +71,14 @@
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
-    
+
 
     // jQuery counterUp
     $('[data-toggle="counter-up"]').counterUp({
         delay: 10,
         time: 1000
     });
-    
+
 
     // Clients carousel
     $(".clients-carousel").owlCarousel({
@@ -65,7 +87,7 @@
         loop: true,
         responsive: { 0: {items: 2}, 768: {items: 4}, 900: {items: 6} }
     });
-    
+
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
@@ -74,6 +96,5 @@
         loop: true,
         responsive: { 0: {items: 1}, 576: {items: 2}, 768: {items: 3}, 992: {items: 4} }
     });
-  
-})(jQuery);
 
+})(jQuery);

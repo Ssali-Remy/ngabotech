@@ -24,12 +24,13 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <!-- Nav Start -->
         <div id="nav">
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-md navbar-light">
+                <nav class="navbar navbar-expand-md navbar-light" aria-label="Primary">
                     <a href="index.html" class="navbar-brand">ngabo<span>tech</span></a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -42,7 +43,7 @@
                             <a href="process.html" class="nav-item nav-link active">Process</a>
                             <a href="pricing.html" class="nav-item nav-link">Plans</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
+                                <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" data-toggle="dropdown">More</a>
                                 <div class="dropdown-menu">
                                     <a href="skill.html" class="dropdown-item">Expertise</a>
                                     <a href="team.html" class="dropdown-item">Our Team</a>
@@ -60,7 +61,7 @@
         <!-- Nav End -->
 
         <!-- Process Start -->
-        <div class="process mt-100">
+        <div id="main-content" tabindex="-1" class="process mt-100">
             <div class="container">
                 <div class="section-header">
                     <h2>Our Process</h2>
@@ -125,8 +126,6 @@
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="index.html">Home</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="about.html">About us</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="service.html">Our services</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms &amp; condition</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
                             </ul>
                         </div>
 
@@ -146,26 +145,19 @@
                             <p>
                                 Remote &amp; on-site support<br>
                                 Serving businesses across your region<br>
-                                <strong>Email:</strong> hello@ngabotech.com<br>
+                                <strong>Email:</strong> <a href="mailto:info@mushangatech.com">info@mushangatech.com</a><br>
+                                <strong>WhatsApp:</strong> <a href="https://wa.me/256701276471" target="_blank" rel="noopener">+256 701 276 471</a><br>
                                 <strong>Support:</strong> 24/7 remote monitoring<br>
                             </p>
 
-                            <div class="social-links">
-                                <a href="#"><i class="ion-logo-twitter"></i></a>
-                                <a href="#"><i class="ion-logo-facebook"></i></a>
-                                <a href="#"><i class="ion-logo-linkedin"></i></a>
-                                <a href="#"><i class="ion-logo-instagram"></i></a>
-                                <a href="#"><i class="ion-logo-googleplus"></i></a>
-                            </div>
+
 
                         </div>
 
                         <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <h4>Subscription</h4>
-                            <p>Get practical IT tips, security alerts and ngabotech updates straight to your inbox.</p>
-                            <form action="" method="post">
-                                <input type="email" name="email"><input type="submit"  value="Subscribe">
-                            </form>
+                            <h4>Get in touch</h4>
+                            <p>Have an IT question? Email our team and we will be in touch.</p>
+                            <p><a href="mailto:info@mushangatech.com">info@mushangatech.com</a></p>
                         </div>
 
                     </div>
@@ -186,9 +178,9 @@
         </div>
         <!-- Footer End -->
 
-        <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+        <a href="#nav" class="back-to-top" aria-label="Back to top"><i class="ion-ios-arrow-up"></i></a>
 
-        <a href="https://wa.me/000000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="ion-logo-whatsapp"></i></a>
+        <a href="https://wa.me/256701276471" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="ion-logo-whatsapp"></i></a>
 
         <!-- Libraries JS -->
         <script src="lib/jquery/jquery.min.js"></script>
